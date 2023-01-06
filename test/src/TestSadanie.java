@@ -21,9 +21,14 @@ public class TestSadanie {
             isRoman = true;
         }
         else if (!Roman.isRoman(strs[0]) && !Roman.isRoman(strs[2])) {
-            chislo1 = Integer.parseInt(strs[0].trim());
-            chislo2 = Integer.parseInt(strs[2].trim());
             isRoman = false;
+            try {
+                chislo1 = Integer.parseInt(strs[0].trim());
+                chislo2 = Integer.parseInt(strs[2].trim());
+            }
+            catch (NumberFormatException e) {
+                throw new Exception ("Введено не целое число либо вообще не число");
+            }
         }
         else {
             throw new Exception("в введенном выражении используются одновременно разные системы счисления");
