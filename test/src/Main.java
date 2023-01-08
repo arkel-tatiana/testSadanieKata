@@ -81,7 +81,7 @@ public class Main {
                 "LXXI", "LXXII", "LXXIII", "LXXIV", "LXXV", "LXXVI", "LXXVII", "LXXVIII", "LXXIX", "LXXX",
                 "LXXXI", "LXXXII", "LXXXIII", "LXXXIV", "LXXXV", "LXXXVI", "LXXXVII", "LXXXVIII", "LXXXIX", "XC",
                 "XCI", "XCII", "XCIII", "XCIV", "XCV", "XCVI", "XCVII", "XCVIII", "XCIX", "C"};
-        public static boolean isRoman(String chislo) {
+        static boolean isRoman(String chislo) {
             for (String Element : romanArray) {
                 if (chislo.equalsIgnoreCase(Element)) {
                     return true;
@@ -89,7 +89,7 @@ public class Main {
             }
             return false;
         }
-        public static int convertorRoman(String romanChislo) {
+        static int convertorRoman(String romanChislo) {
             int i = 0;
             for (String Element : romanArray) {
                 if (romanChislo.equalsIgnoreCase(Element)) {
@@ -99,7 +99,7 @@ public class Main {
             }
             return -1;
         };
-        public static String convertorArab(int arabChislo) {
+        static String convertorArab(int arabChislo) {
             return romanArray[arabChislo];
         }
     }
